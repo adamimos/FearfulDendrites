@@ -1,0 +1,32 @@
+{\rtf1}
+
+Dendritic compartmentalization of learning-related plasticity
+Luca Godenzini, Adam S. Shai and Lucy M. Palmer
+eNeuro 14 June 2022, ENEURO.0060-22.2022; DOI: https://doi.org/10.1523/ENEURO.0060-22.2022
+
+Readme File Created 2022.06.18 by Adam Shai (adamimos@gmail.com)
+
+Here you will find files to recreate the multicompartmental and reduced model
+simulations in the paper. In order to run the multicompartmental simulations,
+there is .bat file which runs many runs of NEURON to simulate inputs
+into the tuft and basal dendrites. The file is batch_run_numsyn.bat
+
+If you look into that file you will see that it loops through numbers of CS+
+synapses and then repeats. Depending on your computer, you will probably have
+to change the number of parallel replicates to run (e.g. decrease %%R and 
+increase %%X), so that your computer doesn't freeze. All together, the simulations
+take me multiple days of compute time to run on a pretty impressive computer.
+
+The batch file calls python files: python batch_py_numsyn_basal.py and
+python batch_py_numsyn_tuft.py which each take an input of how many CS+ synapses
+to run in the simulation.
+
+There are another few .bat files for current injections of different types:
+current_steps.bat, onlybackground.bat, and current_steps_singleAP.bat, each with
+their own python files.
+
+All of these .bat files produce a lot of datafiles, with the extension .p
+
+To analyze the data, there is an ipython nobetbook: fearful_dendrites.ipynb
+All the imported libraries need to be installed, and the working directory will
+need to be changed to the folder with all the data.

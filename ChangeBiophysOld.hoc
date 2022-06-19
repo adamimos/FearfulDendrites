@@ -1,0 +1,30 @@
+
+
+
+//========CHANGE BIOPHYSICS=======
+
+// MAKING I_H CONDUCTANCE 0.0002 EVERYWHERE
+//forall if (ismembrane("Ih")) {
+	//print secname()
+	//print gIhbar_Ih
+	//gIhbar_Ih = 0.0002r
+//}
+
+forall if (ismembrane("Ih")) {gIhbar_Ih = 0.000008}
+//forall if (ismembrane("Ih")) {gIhbar_Ih = gIhbar_Ih/10}
+//forall if (ismembrane("Ih")) {uninsert Ih}
+
+forall{ g_pas = g_pas*5}
+
+forsec hotZoneList{
+	gCa_LVAstbar_Ca_LrVAst = gCa_LVAstbar_Ca_LVAst*2.5
+	gCa_HVAbar_Ca_HVA = gCa_HVAbar_Ca_HVA*25
+	gIhbar_Ih = gIhbar_Ih*5
+}
+
+forsec tuftList{ gIhbar_Ih = gIhbar_Ih*5}
+
+// Try changing K_pst
+
+//forall if (ismembrane("SKv3_1")) {gSKv3_1bar_SKv3_1 = gSKv3_1bar_SKv3_1*1000}
+//forall if (ismembrane("Im")) {gImbar_Im = gImbar_Im/1000}

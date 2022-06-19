@@ -1,0 +1,88 @@
+forall if (ismembrane("Ih")) {gIhbar_Ih = gIhbar_Ih/23}
+forall{ g_pas = g_pas*2.75}
+
+
+kpercent = 1.5
+forall if (ismembrane("SKv3_1")) {gSKv3_1bar_SKv3_1 = gSKv3_1bar_SKv3_1*kpercent}
+forall if (ismembrane("SK_E2")) {gSK_E2bar_SK_E2= gSK_E2bar_SK_E2*kpercent}
+
+forsec hotZoneList{
+	gCa_LVAstbar_Ca_LVAst = gCa_LVAstbar_Ca_LVAst*10.0
+	gCa_HVAbar_Ca_HVA = gCa_HVAbar_Ca_HVA*2.0
+}
+
+//========CHANGE BIOPHYSICS=======
+
+// MAKING I_H CONDUCTANCE 0.0002 EVERYWHERE
+//forall if (ismembrane("Ih")) {
+	//print secname()
+	//print gIhbar_Ih
+	//gIhbar_Ih = 0.0002r
+//}
+
+//forall if (ismembrane("Ih")) {gIhbar_Ih = 0.00008}
+//forall if (ismembrane("Ih")) {gIhbar_Ih = gIhbar_Ih/10}
+//forall if (ismembrane("Ih")) {uninsert Ih}
+
+//forall{ g_pas = g_pas}
+//forall if (ismembrane("Ca_LVAst")) {gCa_LVAstbar_Ca_LVAst = 5.55e-5}
+
+/*
+forsec hotZoneList{
+	gCa_LVAstbar_Ca_LVAst = gCa_LVAstbar_Ca_LVAst*3.0
+	gCa_HVAbar_Ca_HVA = gCa_HVAbar_Ca_HVA*30
+}
+*/
+
+//forall if (ismembrane("Ca_LVAst")) {gCa_LVAstbar_Ca_LVAst = gCa_LVAstbar_Ca_LVAst*4}
+//forall if (ismembrane("Ca_HVA")) {gCa_HVAbar_Ca_HVA = gCa_HVAbar_Ca_HVA*4}
+
+/*
+L5PC.soma {
+if (ismembrane("Ca_LVAst")) {gCa_LVAstbar_Ca_LVAst = gCa_LVAstbar_Ca_LVAst*2}
+if (ismembrane("Ca_HVA")) {gCa_HVAbar_Ca_HVA = gCa_HVAbar_Ca_HVA*3}
+
+}
+*/
+
+
+//forall if (ismembrane("Ca_LVAst")) {gCa_LVAstbar_Ca_LVAst = 0}
+//forall if (ismembrane("Ca_HVA")) {gCa_HVAbar_Ca_HVA = 0}
+
+
+
+
+
+nperc = 1.0
+/*
+forall  if (ismembrane("NaTa_t")) {gNaTa_tbar_NaTa_t = gNaTa_tbar_NaTa_t*nperc}
+forall  if (ismembrane("Nap_Et2")) {gNap_Et2bar_Nap_Et2 = gNap_Et2bar_Nap_Et2*nperc}
+forall  if (ismembrane("NaTs2_t")) {gNaTs2_tbar_NaTs2_t = gNaTs2_tbar_NaTs2_t*nperc}
+*/
+
+
+
+
+
+
+//forsec tuftList{ gIhbar_Ih = gIhbar_Ih*5}
+
+/*
+// Try changing K_pst
+//forsec allSections{ g_pas = g_pas*5}
+forall{ g_pas = g_pas*5}
+forsec allSections{ if (ismembrane("Ih")) {gIhbar_Ih = 0.000008} }
+forsec allSections{ if (ismembrane("SKv3_1")) {gSKv3_1bar_SKv3_1 = gSKv3_1bar_SKv3_1*1000} }
+forsec allSections{ if (ismembrane("Im")) {gImbar_Im = gImbar_Im*1000} }
+forsec allSections{  if (ismembrane("SK_E2")) {gSKE2bar_Sk_E2= gSKE2bar_Sk_E2*100} }
+forsec allSections{  if (ismembrane("NaTa_t")) {gNATa_tbar_NaTa_t = gNATa_tbar_NaTa_t} }
+
+forall{ g_pas = g_pas*5}
+forall if (ismembrane("Ih")) {gIhbar_Ih = gIhbar_Ih/100}
+forall if (ismembrane("Ih")) {gIhbar_Ih = .000005}
+forall if (ismembrane("SKv3_1")) {gSKv3_1bar_SKv3_1 = gSKv3_1bar_SKv3_1*4}
+forall if (ismembrane("Im")) {gImbar_Im = gImbar_Im}
+forall if (ismembrane("SK_E2")) {gSKE2bar_Sk_E2= gSKE2bar_Sk_E2}
+forall  if (ismembrane("NaTa_t")) {gNaTa_tbar_NaTa_t = gNaTa_tbar_NaTa_t}
+
+*/
